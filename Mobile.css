@@ -1,0 +1,91 @@
+.Container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: auto auto .1fr auto ;
+    text-align: center;
+    
+    grid-template-areas: 
+        "Header Menu Menu "
+        "Hero Hero Hero "
+        "Main  . Image"
+        "Main . Extra"
+        "Banner Banner Banner ";
+}
+@media (max-width: 768px) {
+    .Container {
+        display: grid;
+        grid-template-columns: 0.5fr 3fr 2fr ;
+        grid-template-rows: 0.5fr 1fr 1fr 0.4fr 0.3fr ;
+        grid-template-areas: 
+            "Header Header Header "
+            "Hero Hero Hero"
+            "Menu Main Main"
+            "Menu Banner Banner"
+            "Menu  Extra Image"
+            ;
+    }
+}
+
+@media (max-width: 435px) {
+    .Container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto .3fr .2fr  ;
+        grid-template-areas: 
+            "Header"
+            "Menu"
+            "Hero"
+            "Main"
+            "Banner"
+            "Extra"
+            "Image";
+    }
+}
+
+.Header { 
+    background-color: #2a2a2a; 
+    grid-area: Header;
+    align-content: center;
+}
+
+.Menu { 
+    background-color: #e63946; 
+    grid-area: Menu;
+    align-content: center;
+
+}
+
+.Hero { 
+    background-color: #457b9d; 
+    grid-area: Hero;
+    align-content: center;
+
+}
+
+.Main { 
+    background-color: #1d3557; 
+    grid-area: Main;
+    align-content: center;
+
+}
+
+.Banner { 
+    background-color: rgb(216, 216, 109) ; 
+    grid-area: Banner;
+    align-content: center;
+
+}
+
+.Extra { 
+    background-color: #2a9d8f; 
+    grid-area: Extra;
+    align-content: center;
+
+}
+
+.Image { 
+    background-color: #a8dadc; 
+    grid-area: Image;
+    align-content: center;
+
+}
